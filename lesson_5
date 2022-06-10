@@ -1,0 +1,56 @@
+//1. Создать класс "Сотрудник" с полями: ФИО, должность, email, телефон, зарплата, возраст.
+2. Конструктор класса должен заполнять эти поля при создании объекта.
+3. Внутри класса «Сотрудник» написать метод, который выводит информацию об объекте в консоль.
+4. Создать массив из 5 сотрудников.
+Пример:
+Person[] persArray = new Person[5]; // Вначале объявляем массив объектов
+persArray[0] = new Person("Ivanov Ivan", "Engineer", "ivivan@mailbox.com", "892312312", 30000, 30); // потом для каждой ячейки массива задаем объект
+persArray[1] = new Person(...);
+...
+persArray[4] = new Person(...);
+
+5. С помощью цикла вывести информацию только о сотрудниках старше 40 лет.
+
+public class work_5 {
+    public static void main(String[] args) {
+    Employee[] empOffic = new Employee[5];
+        empOffic[0] = new Employee("Ivanov Valera ", "QA ingener", "ivanov@inbox.com", "+7-964-58-75-947", 60000, 35 );
+        empOffic[1] = new Employee("Petrov Aleksandr", "Pilot", "petrov@mail.ru", "+7-002-87-15-058", 80000, 26 );
+        empOffic[2] = new Employee("Irina Sheik", "Singer", "sheikmilk@yandex.ru", "+7-888-66-02-954", 122000, 55 );
+        empOffic[3] = new Employee("Megan Fox", "Actress", "foxikreader@list.ru", "+7-246-72-59-154", 200000, 42 );
+        empOffic[4] = new Employee("Aleksei Magregor", "Fighter", "magregor@nk.com", "+7-157-99-14-357", 800000, 38 );
+        for (Employee employee : empOffic)
+            if (employee.getAge() > 40)
+                System.out.println(employee);
+    }
+}
+public class Employee {
+    private  String name;
+    private  String position;
+    private  String email;
+    private  String phone;
+    private  int salary;
+    private  int age;
+
+        public Employee(String name, String position, String email, String phone, int salary, int age){
+            this.name = name;
+            this.position = position;
+            this.email = email;
+            this.phone = phone;
+            this.salary = salary;
+            this.age = age;
+        }
+        public int getAge(){
+            return(age);
+        }
+
+    public  String toString(){
+         System.out.println();
+                return (name + "\n"
+                 + position + "\n"
+                 + email + "\n"
+                 + phone + "\n"
+                 + salary + "\n" + age);
+
+                  }
+}
