@@ -1,0 +1,16 @@
+public class Main {
+  
+    public static void main(String[] args) {
+        System.out.println("Кошка: ");
+        Animal cat = new Cat(200,2,2);
+        cat.run(1450);
+        cat.swim(1);
+        cat.jump(2);
+
+        System.out.println("Собака: ");
+        Animal dog = new Dog(500,3,2);
+        dog.run(400);
+        dog.swim(2);
+        dog.jump(5);
+    }
+}
